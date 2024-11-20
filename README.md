@@ -17,8 +17,6 @@ The algorithm sets wireless interfaces and creates .pcap capture files of Wi-Fi 
 
 This simple script can be used to capture Wi-Fi packets via interfaces that support [monitor mode](https://en.wikipedia.org/wiki/Monitor_mode).
 
-This algorithm configures the sniffing interfaces, starts the sniffing in each interface, and saves collected data in .pcap files. It also generates reports/logs of each capture in a database and in a text file separately.
-
 The captured files are named with the capture ID, timestamp, and channel (i.e. _CaptureA-2024-Nov-19-h12-m45-s32-ch-1._).
 
 Reports of each capture are stored in a database as well in a text file for keeping track of each capture.
