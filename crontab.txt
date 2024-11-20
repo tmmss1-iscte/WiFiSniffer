@@ -8,6 +8,6 @@
 #
 #
 # Keep in mind that the location of the 'WiFiSniffer' project software may differ to ,
-# your sniffer device,and so you may need to change the filepath of the command to be run.
+# your sniffer device, and so you may need to change the filepath of the command to be run.
 # To automatically run the 'main.py' script on boot, uncomment the next line.
-$@reboot sudo -E /usr/bin/python3 /home/kali/Desktop/WiFiSniffer/main.py
+#@reboot sudo -E /usr/bin/python3 /home/kali/Desktop/WiFiSniffer/main.py
