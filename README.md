@@ -1,9 +1,7 @@
 # Wi-Fi Sniffer
 This repository contains the software of a Wi-Fi sniffer to capture Wi-Fi probe request messages on multiple channels simultaneously during a given period of time and save the collected data into .pcap files.
 
-The software was designed to create a dataset of mobile device messages containing captures of individual devices in an environment isolated from electromagnetic radiation (e.g., inside an anechoic chamber room or inside a Faraday cage), in order to study the ground truth of various mobile devices.
-
-In order to obtain the digital signature of each examined mobile device, the captures must be prosecuted in an isolated environment in which the only equipment present are the sniffer and the mobile device to be examined, so that the captures only contain the probe request messages emitted by the latter.
+The software was designed to create a dataset of mobile device messages containing captures of individual devices in an environment isolated from electromagnetic radiation (e.g., inside an anechoic chamber room or inside a Faraday cage), in which the only equipment present are the sniffer and the mobile device to be examined, in order to study the ground truth of various mobile devices.
 
 The purpose of this study is to develop an accurate people counting algorithm based on probe request messages, mitigating the issue of MAC address randomization that is performed in the large majority of recent [Android](https://source.android.com/docs/core/connect/wifi-mac-randomization-behavior) and [iOS](https://support.apple.com/pt-pt/guide/security/secb9cb3140c/web) devices.
 
