@@ -71,9 +71,7 @@ Each sniffing subprocess created in step 5) uses the [tcpdump](https://www.tcpdu
 
 
 ## Environment requirements
-The file 'env_variables_example.py' is an example of how the env_variables.py file (excluded with gitignore) should look like. 
-
-The example file is meant to be copied and renamed correctly (env_variables.py), in order to change the values of the input variables as desired.
+The file 'env_variables_example.py' is an example of how the env_variables.py file (excluded with gitignore) should look like. The example file is meant to be copied and renamed correctly (env_variables.py), in order to change the values of the input variables as desired.
 
 ## Main
 To run the Wi-Fi sniffer, simply run the 'main.py' file with superuser privileges (```sudo -E python3 main.py```).
