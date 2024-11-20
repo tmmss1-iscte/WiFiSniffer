@@ -17,7 +17,7 @@ The algorithm sets wireless interfaces and creates .pcap capture files of Wi-Fi 
 
 This simple script can be used to capture Wi-Fi packets via interfaces that support [monitor mode](https://en.wikipedia.org/wiki/Monitor_mode).
 
-The captured files are named with the capture ID, timestamp, and channel (i.e. _CaptureA-2024-Nov-19-h12-m45-s32-ch-1._).
+The captured files are named with the capture ID, timestamp, and channel (e.g., _CaptureA-2024-Nov-19-h12-m45-s32-ch-1._).
 
 Reports of each capture are stored in a database as well in a text file for keeping track of each capture.
 
@@ -32,7 +32,7 @@ This software is based on another [WiFi-Sniffer](https://github.com/luciapintor/
 ## Configure interfaces
 The 'configure_interpfaces.py' file is responsible for configuring the wireless interfaces and preparing them to sniff data.
 
-As so, the functions in the 'file configure_interfaces.py' do the following steps:
+As so, the functions in the 'configure_interfaces.py' file do the following steps:
 1. kill possible interfering processes and stop network managers (```sudo airmon-ng check kill```);
 2. get the names of the wireless interfaces;
 3. set the wireless interfaces in monitor mode;
@@ -41,9 +41,9 @@ As so, the functions in the 'file configure_interfaces.py' do the following step
 ***NOTE:*** Some Wi-Fi interfaces do not support all channels, so there is a loop to try to assign all of them correctly.
 
 ## Start sniffing
-The 'start_sniffing file.py' is responsible for sniffing probe request messages, saving the collected data into structured .pcap files, and generating reports of each capture.
+The 'start_sniffing file.py' file is responsible for sniffing probe request messages, saving the collected data into structured .pcap files, and generating reports of each capture.
 
-As so, the functions in the 'start_sniffing.py' do the following steps:
+As so, the functions in the 'start_sniffing.py' file do the following steps:
 1. create a folder for the captured data (if it not exists);
 2. create a folder for the reports of each capture (if it not exists);
 3. create the reports files in the reports folder (if not exists);
