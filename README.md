@@ -92,7 +92,7 @@ before the sniffer starts collecting the probe request messages.
 
 The [faraday_cage](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage) directory contains some information about a custom-made faraday cage purposefully created for this project. This cage was carefully designed and produced to isolate the eletromagnetic radiation from outside and will be use to perform the dataset collection with this WiFiSniffer. This directory contains another two sub-directories: images and isolation_tests. 
 
-* The [images](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage/images) sub-directory contains images of the final version of the faraday cage, along with a description of its dimensions, construction, and equipments.
+* The [images](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage/images) sub-directory contains images of the final version of the faraday cage.
 
 * The [isolation_tests](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage/isolation_tests) sub-direcorty contains the isolation tests prosecuted to test and validate the isolation from outside eletromagnetic and radio interference.
 
