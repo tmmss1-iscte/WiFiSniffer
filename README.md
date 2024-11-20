@@ -80,7 +80,9 @@ To run the Wi-Fi sniffer, simply run the 'main.py' file with superuser privilege
 ### Crontab
 As the sniffer was designed to autonomously perform all its tasks since its boot, instead of executing the 'main.py' script manually, the crontab utility can be used for this purpose.
 
-For this, load the 'crontab.txt' file to crontab using the following command: ```crontab crontab.txt```. This will replace the current crontab file with the 'crontab.txt', in which the last line has a task to run the 'main.py' script on the sniffer boot.
+
+
+For this, load the 'crontab.txt' file to crontab using the following command: ```crontab crontab.txt```.  This will replace the current crontab file with the 'crontab.txt', in which the last line has a scheduled task to run the 'main.py' script on boot.
 
  
 ***NOTE:*** The task on the 'crontab.txt' file assumes that the 'main.py' script is located at '/home/kali/Desktop/WiFiSniffer'. You may need to change this location according to your needs.
