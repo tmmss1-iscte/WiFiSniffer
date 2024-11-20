@@ -77,8 +77,8 @@ To run the Wi-Fi sniffer, simply run the 'main.py' file with superuser privilege
 ***NOTE:*** The sniffer will only execute the code if there are at least two wireless interfaces on the sniffer, which means that there is at least one external Wi-Fi dongle connected to the Raspberry Pi. This mechanism was implemented to allow the normal operation of the Raspberry Pi when no Wi-Fi dongle is connected to it, which sometimes was intended during the test phase of this project.
 
 
-## Requirements
-This project requires the installation of the ```pyric```, ```scapy```, and ```pyshark``` libraries through pip, and the ```wireless-tools```, ```tcpdump``` utility and ```sqlite3``` packages from apt repository.
+## Pre-requisites
+This project requires the installation of the ```pyric```, ```scapy```, and ```pyshark``` libraries through pip, and the ```wireless-tools```, ```cron``, ```tcpdump```, and ```sqlite3``` packages from apt repository.
 
 ```pip install pyric```
 
@@ -87,6 +87,8 @@ This project requires the installation of the ```pyric```, ```scapy```, and ```p
 ```pip install pyshark```
 
 ```sudo apt-get install wireless-tools```
+
+```sudo apt-get install cron```
 
 ```sudo apt-get install tcpdump -y```
 
