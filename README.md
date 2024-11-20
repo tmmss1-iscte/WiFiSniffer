@@ -88,6 +88,10 @@ For this, load the 'crontab.txt' file to crontab using the following command: ``
 ***NOTE:*** The task on the 'crontab.txt' file assumes that the 'main.py' script is located at '/home/kali/Desktop/WiFiSniffer'. You may need to change this location according to your needs.
 
 
+## Faraday cage
+
+The 'faraday_cage' directory contains some information about the custom-made faraday cage purposefully created for this project. The directory contains image files of the cage, as well as the isolation tests prosecuted to test and validate the isolation from outside eletromagnetic and radio interference.
+
 ## Pre-requisites
 This project requires the installation of the ```pyric```, ```scapy```, and ```pyshark``` libraries through pip, and the ```wireless-tools```, ```cron```, ```tcpdump```, and ```sqlite3``` packages from apt repository.
 
