@@ -46,10 +46,10 @@ As so, the functions in the 'file configure_interfaces.py' do the following step
 The 'start_sniffing file.py' is responsible for sniffing probe request messages, saving the collected data into structured .pcap files, and generating reports of each capture.
 
 As so, the functions in the 'start_sniffing.py' do the following steps:
-1. create a folder for the reports of each capture (if it not exists);
-2. create a folder for the captured data (if it not exists);
-4. show the timestamp of the capture start and its duration;
-5. prepare the capture filename structure (```Capture{capture_id}-{timestamp}-ch{channel}.```);
+1. create a folder for the captured data (if it not exists);
+2. create a folder for the reports of each capture (if it not exists);
+4. show the capture ID, followed by the timestamp of the capture start and its duration;
+5. prepare the capture filename structure (```Capture{capture_id}-{timestamp}-ch{channel}.pcap```);
 6. start a sniffing subprocess in each assigned channel during the specified duration;
 7. terminate all sniffing processes;
 8. generate a report for each capture, and insert them into a database and a text file;
