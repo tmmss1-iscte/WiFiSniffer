@@ -74,11 +74,19 @@ The file 'env_variables_example.py' is an example of how the env_variables.py fi
 ## Main
 To run the Wi-Fi sniffer, simply run the 'main.py' file with superuser privileges (```sudo -E python3 main.py```).
 
-***NOTE:*** The sniffer will only execute the code if there are at least two wireless interfaces on the sniffer, which means that there is at least one external Wi-Fi dongle connected to the Raspberry Pi. This mechanism was implemented to allow the normal operation of the Raspberry Pi when no Wi-Fi dongle is connected to it, which sometimes was intended during the test phase of this project.
+***NOTE:*** The sniffer will only start sniffing if there are at least two wireless interfaces on the sniffer, which means that there is at least one external Wi-Fi dongle connected to the Raspberry Pi. This mechanism was implemented to allow the normal operation of the Raspberry Pi when no Wi-Fi dongle is connected to it, which sometimes was intended during the test phase of this project.
+
+### Crontab
+As the sniffer was designed to autonomously perform all its tasks since its boot, the crontab utility can be used to execute the 'main.py' script on the sniffer boot.
+
+For this, load the 'crontab.txt' file to crontab using the following command: ```crontab crontab.txt```. This will replace the current crontab file with the 'crontab.txt', in which the last line has a task to run the 'main.py' script on the sniffer boot.
+
+ 
+***NOTE:*** The task on the 'crontab.txt' file assumes that the 'main.py' script is located at '/home/kali/Desktop/WiFiSniffer'. You may need to change this location according to your needs.
 
 
 ## Pre-requisites
-This project requires the installation of the ```pyric```, ```scapy```, and ```pyshark``` libraries through pip, and the ```wireless-tools```, ```cron``, ```tcpdump```, and ```sqlite3``` packages from apt repository.
+This project requires the installation of the ```pyric```, ```scapy```, and ```pyshark``` libraries through pip, and the ```wireless-tools```, ```cron```, ```tcpdump```, and ```sqlite3``` packages from apt repository.
 
 ```pip install pyric```
 
