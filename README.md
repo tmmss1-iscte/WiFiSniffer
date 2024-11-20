@@ -70,7 +70,7 @@ The report files are saved in a directory called 'Reports'.
 
 
 ## Environment requirements
-The file 'env_variables_example.py' is an example of how the env_variables.py file (excluded with gitignore) should look like. The example file is meant to be copied and renamed correctly (env_variables.py), in order to change the values of the input variables as desired.
+The file 'env_variables_example.py' is an example of how the env_variables.py file should look like. The example file is meant to be copied and renamed correctly (env_variables.py), in order to change the values of the input variables as desired.
 
 ## Main
 To run the Wi-Fi sniffer, simply run the 'main.py' file with superuser privileges (```sudo -E python3 main.py```).
