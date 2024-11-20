@@ -17,7 +17,7 @@ The algorithm sets wireless interfaces and creates .pcap capture files of Wi-Fi 
 
 This simple script can be used to capture Wi-Fi packets via interfaces that support [monitor mode](https://en.wikipedia.org/wiki/Monitor_mode).
 
-This algorithm configures the sniffing interfaces, starts the sniffing in each interface, and saves collected data in .pcap files.
+This algorithm configures the sniffing interfaces, starts the sniffing in each interface, and saves collected data in .pcap files. It also generates reports/logs of each capture in a database and in a text file separately.
 
 The captured files are named with the capture ID, timestamp, and channel (i.e. _CaptureA-2024-Nov-19-h12-m45-s32-ch-1._).
 
@@ -48,11 +48,12 @@ The 'start_sniffing file.py' is responsible for sniffing probe request messages,
 As so, the functions in the 'start_sniffing.py' do the following steps:
 1. create a folder for the captured data (if it not exists);
 2. create a folder for the reports of each capture (if it not exists);
+3. create the reports files in the reports folder (if not exists);
 4. show the capture ID, followed by the timestamp of the capture start and its duration;
 5. prepare the capture filename structure (```Capture{capture_id}-{timestamp}-ch{channel}.pcap```);
 6. start a sniffing subprocess in each assigned channel during the specified duration;
 7. terminate all sniffing processes;
-8. generate a report for each capture, and insert them into a database and a text file;
+8. generate a report for each capture, and insert them into the reports files;
 9. shutdown the sniffer;
 
 
@@ -63,6 +64,8 @@ Each sniffing subprocess created in step 5) uses the [tcpdump](https://www.tcpdu
 * '-e' - to print the link layer headers;
 * '-w' - to define the output file format (. files followed by the filename);
 * 'type' 'mgt' and 'subtype' ' probe-req' - to only capture management probe request messages.
+
+The captured .pcap files are stored in a directory called 'Data'. The report files are stored in a directory called 'Reports'.
 
 
 ***NOTE:*** The sniffer may take some time (in the order of seconds) from steps 8) and 9). This is due to the analysis of counting the number of captured packets in each .pcap file, which sometimes may take longer depending on the amount of collected data.
@@ -77,7 +80,7 @@ To run the Wi-Fi sniffer, simply run the 'main.py' file with superuser privilege
 ***NOTE:*** The sniffer will only start sniffing if there are at least two wireless interfaces on the sniffer, which means that there is at least one external Wi-Fi dongle connected to the Raspberry Pi. This mechanism was implemented to allow the normal operation of the Raspberry Pi when no Wi-Fi dongle is connected to it, which sometimes was intended during the test phase of this project.
 
 ### Crontab
-As the sniffer was designed to autonomously perform all its tasks since its boot, the crontab utility can be used to execute the 'main.py' script on the sniffer boot.
+As the sniffer was designed to autonomously perform all its tasks since its boot, instead of executing the 'main.py' script manually, the crontab utility can be used for this purpose.
 
 For this, load the 'crontab.txt' file to crontab using the following command: ```crontab crontab.txt```. This will replace the current crontab file with the 'crontab.txt', in which the last line has a task to run the 'main.py' script on the sniffer boot.
 
