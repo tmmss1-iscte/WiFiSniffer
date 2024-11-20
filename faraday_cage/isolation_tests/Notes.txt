@@ -1,0 +1,15 @@
+Isolation - Faraday Cage:
+
+To test the isolation effectiveness of the Faraday Cage, several captures were conducted with no equipment inside the cage except for the detection setup (power bank, Raspberry Pi, and antennas). If no packets were detected by the sensor during any of the captures, it would be considered that the Faraday Cage was effectively isolating external electromagnetic radiation. Consequently, the sensor would only detect messages from mobile devices inside the cage.
+
+Thus, five captures were performed to test the Faraday Cage's isolation under different durations, incrementally increasing up to a maximum of 20 minutes—the planned capture duration for dataset collection and construction:
+
+Capture 1 - Duration: 2 minutes - Detected packets: 0
+Capture 2 - Duration: 5 minutes - Detected packets: 0
+Capture 3 - Duration: 10 minutes - Detected packets: 0
+Capture 4 - Duration: 20 minutes - Detected packets: 0
+Capture 5 - Duration: 20 minutes - Detected packets: 0
+Capture 6 - Duration: 20 minutes - Detected packets: 0
+Note: During Capture 6, at three distinct moments within the 20-minute period, a mobile phone was placed very close to the Faraday Cage (approximately 2 cm away). Probe requests were intentionally triggered by toggling the phone's Wi-Fi interface off and on, in an attempt to force the detection of these messages by the sensor inside the cage. However, no such detection occurred, further reinforcing our assertion regarding the Faraday Cage's isolation effectiveness.
+
+Since no packets were detected in any of the captures, we believe it is reasonable to conclude that the Faraday Cage is adequately isolating external electromagnetic radiation. Therefore, it is ready for the dataset collection and construction phase.
