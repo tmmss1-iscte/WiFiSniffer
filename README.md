@@ -90,7 +90,7 @@ For this, load the 'crontab.txt' file to crontab using the following command: ``
 
 ## Faraday cage
 
-The [faraday_cage](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage) directory contains some information about the custom-made faraday cage purposefully created for this project. This directory contains another two sub-directories: images and isolation_tests. 
+The [faraday_cage](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage) directory contains some information about a custom-made faraday cage purposefully created for this project. This cage was carefully designed and produced to isolate the eletromagnetic radiation from outside and will be use to perform the dataset collection with this WiFiSniffer. This directory contains another two sub-directories: images and isolation_tests. 
 
 * The [images](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage/images) sub-directory contains images of the final version of the faraday cage, along with a description of its dimensions, construction, and equipments.
 
