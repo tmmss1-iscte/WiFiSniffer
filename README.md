@@ -51,9 +51,8 @@ As so, the functions in the 'start_sniffing.py' file do the following steps:
 5. prepare the capture filename structure (```Capture{capture_id}-{timestamp}-ch{channel}.pcap```);
 6. start a sniffing subprocess in each assigned channel during the specified duration;
 7. terminate all sniffing processes;
-8. generate a report for each capture, and insert them into the reports files;
+8. generate a report for each capture, and insert them into the report files;
 9. shutdown the sniffer;
-
 
 Each sniffing subprocess created in step 5) uses the [tcpdump](https://www.tcpdump.org/) utility with the following arguments:
 * '-i' - to specify the wireless monitor interface for capture;
@@ -63,8 +62,9 @@ Each sniffing subprocess created in step 5) uses the [tcpdump](https://www.tcpdu
 * '-w' - to define the output file format (. files followed by the filename);
 * 'type' 'mgt' and 'subtype' ' probe-req' - to only capture management probe request messages.
 
-The captured .pcap files are stored in a directory called 'Data'. The report files are stored in a directory called 'Reports'.
+The captured .pcap files are saved in a directory called 'Data'. 
 
+The report files are saved in a directory called 'Reports'.
 
 ***NOTE:*** The sniffer may take some time (in the order of seconds) from steps 8) and 9). This is due to the analysis of counting the number of captured packets in each .pcap file, which sometimes may take longer depending on the amount of collected data.
 
