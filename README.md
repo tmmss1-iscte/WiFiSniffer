@@ -90,7 +90,11 @@ For this, load the 'crontab.txt' file to crontab using the following command: ``
 
 ## Faraday cage
 
-The 'faraday_cage' directory contains some information about the custom-made faraday cage purposefully created for this project. The directory contains image files of the cage, as well as the isolation tests prosecuted to test and validate the isolation from outside eletromagnetic and radio interference.
+The [faraday_cage](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage) directory contains some information about the custom-made faraday cage purposefully created for this project. This directory contains another two sub-directories: images and isolation_tests. 
+
+* The [images](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage/images) sub-directory contains images of the final version of the faraday cage, along with a description of its dimensions, construction, and equipments.
+
+* The [isolation_tests](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage/isolation_tests) sub-direcorty contains the isolation tests prosecuted to test and validate the isolation from outside eletromagnetic and radio interference.
 
 ## Pre-requisites
 This project requires the installation of the ```pyric```, ```scapy```, and ```pyshark``` libraries through pip, and the ```wireless-tools```, ```cron```, ```tcpdump```, and ```sqlite3``` packages from apt repository.
