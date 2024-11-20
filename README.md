@@ -59,14 +59,14 @@ Each sniffing subprocess created in step 5) uses the [tcpdump](https://www.tcpdu
 * '-n' - to do not convert addresses;
 * '-tt' - to show the timestamp in seconds;
 * '-e' - to print the link layer headers;
-* '-w' - to define the output file format (. files followed by the filename);
+* '-w' - to define the output file format (.pcap files followed by the filename);
 * 'type' 'mgt' and 'subtype' ' probe-req' - to only capture management probe request messages.
 
 The captured .pcap files are saved in a directory called 'Data'. 
 
 The report files are saved in a directory called 'Reports'.
 
-***NOTE:*** The sniffer may take some time (in the order of seconds) from steps 8) and 9). This is due to the analysis of counting the number of captured packets in each .pcap file, which sometimes may take longer depending on the amount of collected data.
+***NOTE:*** The sniffer may take some time (seconds) between steps 8) and 9). This is due to the analysis of counting the number of captured packets in each .pcap file, which sometimes may take longer depending on the amount of collected data.
 
 
 ## Environment requirements
@@ -75,7 +75,7 @@ The file 'env_variables_example.py' is an example of how the env_variables.py fi
 ## Main
 To run the Wi-Fi sniffer, simply run the 'main.py' file with superuser privileges (```sudo -E python3 main.py```).
 
-***NOTE:*** The sniffer will only start sniffing if there are at least two wireless interfaces on the sniffer, which means that there is at least one external Wi-Fi dongle connected to the Raspberry Pi. This mechanism was implemented to allow the normal operation of the Raspberry Pi when no Wi-Fi dongle is connected to it, which sometimes was intended during the test phase of this project.
+***NOTE:*** The sniffer will only start sniffing if there are at least two wireless interfaces on the sniffer, which means that there is at least one external Wi-Fi dongle connected to the sniffer (Raspberry Pi). This mechanism was implemented to allow the normal operation of the Raspberry Pi when no Wi-Fi dongle is connected to it, which sometimes was intended during the test phase of this project.
 
 ### Crontab
 As the sniffer was designed to autonomously perform all its tasks since its boot, instead of executing the 'main.py' script manually, the crontab utility can be used for this purpose.
@@ -85,12 +85,11 @@ For this, load the 'crontab.txt' file to crontab using the following command: ``
  
 ***NOTE 1:*** The task on the 'crontab.txt' file assumes that the 'main.py' script is located at '/home/kali/Desktop/WiFiSniffer'. You may need to change this location according to your needs.
 
-***NOTE 2:*** A sleep of 40 seconds was added to the scheduled-time on crontab to give time to close the Faraday cage before the sniffer starts executing the software. A sleep of 40 seconds was chosen because it was noticed that the Raspberry Pi 5 (the model to be used in the dataset collection) takes around ~20-25 seconds to boot, and so by adding 40 seconds to this time leaves around 1 minute to close the Faraday cage
-before the sniffer starts collecting the probe request messages.
+***NOTE 2:*** A sleep of 40 seconds was added to the scheduled task on crontab. This time period of sleep was chosen because it was noticed that the Raspberry Pi 5 (the model to be used in the dataset collection) takes around ~20-25 seconds to boot, and so by adding 40 seconds to this time leaves more than enough around 1 minute to close the Faraday cage before starting collecting the probe request messages.
 
 ## Faraday cage
 
-The [faraday_cage](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage) directory contains some information about a custom-made faraday cage purposefully created for this project. This cage was carefully designed and produced to isolate the eletromagnetic radiation from outside and will be use to perform the dataset collection with this WiFiSniffer. This directory contains another two sub-directories: images and isolation_tests. 
+The [faraday_cage](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage) directory contains some information about a custom-made faraday cage purposefully created for this project. This cage was carefully designed and produced to isolate the eletromagnetic radiation from outside and will be use to perform the dataset collection with this WiFiSniffer. This directory contains another two sub-directories: [images](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage/images) and [isolation_tests](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage/isolation_tests). 
 
 * The [images](https://github.com/tmmss1-iscte/WiFiSniffer/tree/main/faraday_cage/images) sub-directory contains images of the final version of the faraday cage.
 
