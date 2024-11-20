@@ -9,7 +9,7 @@ This Wi-Fi sniffer was designed to perform all its tasks completely autonomously
 
   0. (Sniffer Boot)
   1. Set wireless interfaces in monitor mode (```configure_interfaces.py```);
-  2. Start sniffing probe request packets during a pre-defined period of time, writing out the collected data to .pcap files (```start_sniffing.py```);
+  2. Start sniffing probe requests during a pre-defined period of time, writing out the captured data to .pcap files (```start_sniffing.py```);
   4. Generate reports/logs of each capture (```start_sniffing.py```);
   5. (Sniffer shutdown).
 
