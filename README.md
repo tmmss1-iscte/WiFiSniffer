@@ -80,13 +80,13 @@ To run the Wi-Fi sniffer, simply run the 'main.py' file with superuser privilege
 ### Crontab
 As the sniffer was designed to autonomously perform all its tasks since its boot, instead of executing the 'main.py' script manually, the crontab utility can be used for this purpose.
 
-
-
 For this, load the 'crontab.txt' file to crontab using the following command: ```crontab crontab.txt```.  This will replace the current crontab file with the 'crontab.txt', in which the last line has a scheduled task to run the 'main.py' script on boot.
 
  
-***NOTE:*** The task on the 'crontab.txt' file assumes that the 'main.py' script is located at '/home/kali/Desktop/WiFiSniffer'. You may need to change this location according to your needs.
+***NOTE 1:*** The task on the 'crontab.txt' file assumes that the 'main.py' script is located at '/home/kali/Desktop/WiFiSniffer'. You may need to change this location according to your needs.
 
+***NOTE 2:*** A sleep of 40 seconds was added to the scheduled-time on crontab to give time to close the Faraday cage before the sniffer starts executing the software. A sleep of 40 seconds was chosen because it was noticed that the Raspberry Pi 5 (the model to be used in the dataset collection) takes around ~20-25 seconds to boot, and so by adding 40 seconds to this time leaves around 1 minute to close the Faraday cage
+before the sniffer starts collecting the probe request messages.
 
 ## Faraday cage
 
